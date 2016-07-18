@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test fullPage</title>
+	<link rel="stylesheet" href="style/jquery.fullPage.css">
+	<style>
+		.header{
+			position: fixed;
+			top: 20px;
+			text-align: center;
+			width: 100%
+		}
+	</style>
+</head>
+<body>
+	<div class="header" id="header">
+		我是头部
+	</div>
+	<div id="fullpage">
+		<div class="section">一些内容</div>
+		<div class="section">
+			<div class="slide">幻灯片</div>
+			<div class="slide">幻灯片</div>
+			<div class="slide">幻灯片</div>
+		</div>
+		<div class="section active">一些内容</div>
+		<div class="section">一些内容</div>
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.fullPage.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('#fullpage').fullpage(
+				{
+					sectionsColor:['red','blue','yellow','green'],
+					// controlArrows:false,
+					// verticalCentered:false,
+					// resize:true,
+					scrollingSpeed:700,
+					// anchors:['page1','page2','page3','page4'],
+					// loopTop:true,
+					// loopBottom:true,
+					// paddingTop:'130px',
+					fixedElements:'#header',
+					continuousVertical:true,
+					navigation:true,
+					navigationPosition:'right',
+				}
+				)
+		})
+	</script>
+</body>
+</html>
